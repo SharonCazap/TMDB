@@ -133,9 +133,9 @@ main .filters ul li{
 .noFavorite{
   display: flex;
   flex-direction: column;
-  flex-flow: row wrap;
   width: 100%;
   justify-content: center;
+  align-items: center;
 }
 .noFavorite h2{
   font-size: 21px;

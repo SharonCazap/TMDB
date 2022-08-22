@@ -94,7 +94,7 @@ const moviesFavorites = async () => {
   grid.innerHTML = null; 
   
   if(favoritesMovies == null){ 
-    grid.innerHTML += "<div class='noFavorite'><h2>You don't have favorites movies</h2></div>"
+    grid.innerHTML += "<div class='noFavorite'><h2>You don't have favorites movies</h2><h3>Select a movie and add it to Favorites!</h3></div>"
   }
 
   for(var i = 0; i < favoritesMovies.length; i++){
