@@ -1,3 +1,3 @@
 # TMDB
  
-**The Movie DataBase Excercise by Sharon Cazap**
+**The Movie DataBase Exercise by Sharon Cazap**
