@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+header{ 
+  background-color: rgb(79, 79, 210);
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+  margin-bottom: 20px;
+}
+.header-index{
+  min-height: 200px;
+  justify-content: center;
+  align-items: center;
+}
+.header-index h1{
+  font-size: 48px;
+  color: #ffffff;
+  width: 60%;
+  text-align: center;
+}
+main{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
+}
+main .filters{ 
+  display: flex;
+  flex-direction: column; 
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+main .filters h3{
+  margin: 20px;
+}
+main .filters ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+}
+main .filters ul li{
+  margin-right: 20px;
+  font-size: 21px;
+  cursor: pointer;
+}
+.selected{
+  color: rgb(79, 79, 210);
+}
+#moviesGrid, #castMovieData, #similarMoviesData{
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 0 auto 30px;
+}
+.card-movie{
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 10px;
+  box-shadow: 0px 10px 7px 1px rgba(0,0,0,0.08);
+  overflow: hidden;
+  margin: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.card-cast{
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.card-movie:hover, .card-cast:hover{
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+.card-cast .image{
+  width: 110px;
+  height: 110px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 100%;
+}
+.image img{
+  width: 100%;
+}
+.card-cast .image img{
+  width: 100%;
+}
+.card-movie .movie-info, .card-cast .cast-info{
+  margin: 10px 10px 15px;
+}
+.card-cast .cast-info{
+  text-align: center;
+}
+.card-movie .movie-info h2, .card-cast .cast-info h2{
+  font-size: 18px; 
+  margin: 0 0 10px;
+}
+.card-movie .movie-info p{
+  font-size: 14px;
+  display: flex;
+  align-items: end;
+  margin: 10px 0;
+}
+.card-cast .cast-info p{
+  font-size: 14px;
+}
+.card-movie .movie-info span{
+  margin-right: 5px;
+}
+.noFavorite{
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: center;
+}
+.noFavorite h2{
+  font-size: 21px;
+  color: rgb(79, 79, 210);
+  margin: 50px 0;
+}
+footer{
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(79, 79, 210);
+  min-height: 50px;
+  margin-top: auto;
+}
+footer div p{
+  color: #ffffff;
+  font-size: 16px;
+}
+
+/* MOVIE DETAILS */ 
+
+.header-movie{ 
+  min-height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+.header-movie a{
+  text-decoration: none;
+}
+.header-movie h1{
+  font-size: 28px;
+  color: #ffffff;
+  width: 60%;
+}
+.movie{ 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0 40px;
+}
+.movie .image{
+  width: 20%;
+}
+.movie .image img{ 
+  width: 100%;
+  border-radius: 10px;
+}
+.movie .movie-info{
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+  width: 75%;
+}
+.movie .movie-info h2{
+  font-size: 32px;
+  font-weight: 700;
+  width: 100%;
+  margin: 10px 0;
+}
+.movie .movie-info span{
+  font-size: 24px;
+  margin: 10px 0;
+  width: 100%;
+}
+.movie .movie-info p{
+  font-size: 16px;
+  line-height: 26px;
+  width: 100%;
+}
+.movie .movie-info .dateTime{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-flow: row wrap;
+}
+.movie .movie-info .dateTime p{
+  width: fit-content;
+}
+.movie .movie-info .dateTime p:last-of-type{
+  margin-left: 5px;
+}
+.movie #movie-genres{
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.movie #movie-genres p{
+  margin-right: 10px;
+  border-radius: 10px;
+  padding: 2px 20px;
+  background-color: rgb(215, 215, 255);
+  width: fit-content;
+}
+.movie .vote-average{
+  display: block;
+  width: 100%;
+}
+.movie .vote-average p{
+  font-size: 14px;
+}
+.movie .vote-average p span, .movie .add-favorite span{
+  margin: 0 5px 0 0;
+  font-size: 14px;
+}
+.movie .add-favorite{ 
+  display: block;
+  width: 100%;
+}
+.movie .add-favorite a{
+  text-decoration: none;
+  color: rgb(79, 79, 210);
+}
+.added-favorites::after{
+  content: ' Added to favorites';
+}
+#castMovie h3, #similarMovies h3{
+  font-size: 21px;
+  color: rgb(79, 79, 210);
+  margin: 20px 0;
+} 
+
+/* MEDIA QUERIES */ 
+@media screen and (max-width: 1440px) {
+  main{
+    width: 80%;
+  }
+  #moviesGrid{
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1280px) {
+  main{
+    width: 90%;
+  }
+  #castMovieData{
+    justify-content: center;
+  }
+  #similarMoviesData{
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main{
+    width: 90%;
+  }
+  .card-movie{
+    width: 220px;
+  }
+  .movie .image{
+    width: 30%;
+  }
+  .movie .movie-info{
+    width: 65%;
+  }
+  #castMovieData{
+    justify-content: center;
+  }
+  .card-cast{
+    width: 120px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main{
+    width: 95%;
+  }
+  .movie{
+    justify-content: center;
+  }
+  .movie .image{
+    width: 50%;
+  }
+  .movie .movie-info{
+    width: 100%;
+    justify-content: center;
+  }
+  .movie #movie-genres{
+    width: 100%;
+  }
+  .movie .vote-average{
+    display: flex;
+    width: 50%;
+  }
+  .movie .movie-info .dateTime p{
+    width: 50%;
+  }
+  .movie .movie-info .dateTime p:last-of-type{
+    margin-left: 0;
+    text-align: right;
+  }
+  .movie .add-favorite{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    flex-direction: row;
+    justify-content: end;
+  }
+  .movie .add-favorite span{
+    display: inherit;
+    width: auto;
+  }
+  .card-cast{
+    width: 150px;
+  }
+}
+@media screen and (max-width: 465px){
+  .card-movie{
+    width: 180px;
+  }
+}
