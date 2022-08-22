@@ -8,7 +8,6 @@ const API_URL_MOVIE_CREDITS = BASE_URL + '/movie/' + movie + '/credits?' + API_K
 const API_URL_MOVIE_SIMILAR = BASE_URL + '/movie/' + movie + '/similar?' + API_KEY; 
 const IMG_URL = 'https://image.tmdb.org/t/p/w500/'; 
 
-
 const CardMovie = dataMovie => {
   const { 
       id, 
