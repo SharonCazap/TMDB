@@ -321,6 +321,12 @@ footer div p{
   .movie #movie-genres{
     width: 100%;
   }
+  .movie .movie-info .dateTime{
+    margin: 10px 0;
+  }
+  .movie #movie-genres p{
+    margin: 10px;
+  }
   .movie .vote-average{
     display: flex;
     width: 50%;
