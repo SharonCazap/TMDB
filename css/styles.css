@@ -17,6 +17,8 @@ header{
   flex-flow: row wrap;
   margin-bottom: 20px;
 }
+
+/* INDEX */
 .header-index{
   min-height: 200px;
   justify-content: center;
